@@ -15,18 +15,20 @@ public class TestPerson {
     
     assertEquals(20, p.getAge());
     assertEquals("Fird Birfle", p.getName());
+
+    
     
     assertEquals(215325.242, p.calculateBonus(), 0.01);
     assertEquals("The Honorable Fird Birfle", p.becomeJudge());
     assertEquals(30, p.timeWarp());
   }
-  
   @Test(expected=IllegalArgumentException.class)
   public void setAgeToBeNegative() {
     Person p = new Person();
     p.setAge(-20);
   }
   
+
   @Test(expected=IllegalArgumentException.class)
   public void setNameToNull() {
     Person p = new Person();
